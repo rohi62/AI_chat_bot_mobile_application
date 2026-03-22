@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_message_ai.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+    <!-- AI Icon on top -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_gradient_avatar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- AI Message Text — full width, no bubble card -->
+    <TextView
+        android:id="@+id/aiMessageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello! I'm your AI assistant. How can I help you today?"
+        android:textSize="15sp"
+        android:textColor="#1A3A5C"
+        android:lineSpacingMultiplier="1.6"
+        android:fontFamily="sans-serif" />
+
+    <!-- Timestamp -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="Powered by rohit singh"
+        android:textSize="11sp"
+        android:textColor="#8BB8E0"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
