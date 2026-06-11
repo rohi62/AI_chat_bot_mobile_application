@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
         promptInput.setHintTextColor(android.graphics.Color.parseColor("#93BDE4"));
 
-        // Set hint color programmatically (XML hintTextColor not supported)
+    
         promptInput.setHintTextColor(android.graphics.Color.parseColor("#93BDE4"));
 
-        // Initialize Firebase Gemini Model
+     
         GenerativeModel ai = FirebaseAI.getInstance(GenerativeBackend.googleAI())
                 .generativeModel("gemini-3-flash-preview");
 
         model = GenerativeModelFutures.from(ai);
 
-        // Send button click
+     
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,18 +66,17 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Show user message bubble
+              
                 addUserMessage(promptText);
                 promptInput.setText("");
 
-                // Send to Gemini
                 sendPrompt(promptText);
             }
         });
     }
 
     private void sendPrompt(String text) {
-        // Show "Thinking..." AI bubble
+        
         addAiMessage("Thinking...");
 
         Content prompt = new Content.Builder()
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         }, executor);
     }
 
-    // Inflate and add a user message bubble
+ 
     private void addUserMessage(String text) {
         View view = LayoutInflater.from(this)
                 .inflate(R.layout.item_message_user, messagesContainer, false);
@@ -114,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         scrollToBottom();
     }
 
-    // Inflate and add an AI message bubble
+  
     private void addAiMessage(String text) {
         View view = LayoutInflater.from(this)
                 .inflate(R.layout.item_message_ai, messagesContainer, false);
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         scrollToBottom();
     }
 
-    // Update the text of the last AI bubble (e.g. replace "Thinking...")
+  
     private void updateLastAiMessage(String text) {
         int childCount = messagesContainer.getChildCount();
         for (int i = childCount - 1; i >= 0; i--) {
