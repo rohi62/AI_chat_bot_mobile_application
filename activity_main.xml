@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/bg_gradient_blue_white">
 
-    <!-- HEADER: icon + MYF5AI name only -->
+  
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- CHAT MESSAGES AREA -->
+  
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -77,16 +77,16 @@
             android:orientation="vertical"
             android:paddingBottom="8dp">
 
-            <!-- AI Message Example -->
+            
             <include layout="@layout/item_message_ai" />
 
-            <!-- User Message Example -->
+           
             <include layout="@layout/item_message_user" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- INPUT BAR — ChatGPT style: rounded pill with send button inside -->
+ 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp">
 
-        <!-- EditText — no background, grows with content -->
+       
         <EditText
             android:id="@+id/promptInput"
             android:layout_width="0dp"
@@ -120,7 +120,7 @@
             android:paddingBottom="6dp"
             android:fontFamily="sans-serif" />
 
-        <!-- Send Button — circle gradient inside the pill -->
+      
         <LinearLayout
             android:id="@+id/sendBtn"
             android:layout_width="42dp"
