@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(@Nullable GenerateContentResponse result) {
                 runOnUiThread(() -> {
-                    // Replace the last "Thinking..." bubble with actual response
+                   
                     updateLastAiMessage(result.getText());
                 });
             }
